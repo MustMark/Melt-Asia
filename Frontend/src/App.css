@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+
+.fly-with-us {
+  font-size: 160px;
+  margin-top: 30vh;
+  font-weight: 600;
+  color: white;
+}
+
+.passenger-button {
+  display: grid;
+  gap: 15px;
+  width: 150px;
+  height: 50px;
+}
+
+.selected-passenger {
+  background-color: #fc4433;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(2, 40px) 100px repeat(3, 40px);
+  gap: 10px;
+}
+
+.select-luggage {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  gap: 10px;
+}
+
+.seat-map:before {
+  content: " ";
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50px + 5px);
+  width: 10px;
+}
+
+.seat-map:before div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+}
+
+.seat {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 0.8em;
+  border-radius: 50%;
+}
+
+.selected {
+  background-color: #fc4433;
+  color: #fff;
+}
+
+.reserved {
+  background-color: #545454;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.unavailable {
+  color: #fff;
+  background-color: #7ce655dc;
+  cursor: not-allowed;
+}
+
+.hot_seat {
+
+  border: 2px solid red;
+}
+
+.show-seat {
+  font-size: 16px;
+}
+
+.tooltip {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 200px;
+}
+
+.passengers-info {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+
+
+.passengers-info input,
+.passengers-info select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.passengers-info select {
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z" /></svg>') no-repeat right center;
+  background-size: 20px;
+}
+
+.gender-selection {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.gender-selection label {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.gender-selection input {
+  margin-right: 5px;
+}
+
+.passengers-info button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.passengers-info button:hover {
+  background-color: #0056b3;
+}
+
+.scrollable-container {
+  overflow-y: auto;
+}
+
+.boardingPass-name {
+
+  position: relative;
+  left: 35px;
+  top: -390px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.boardingPass-departure {
+
+  position: relative;
+  left: 35px;
+  top: -353px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.boardingPass-destination {
+
+  position: relative;
+  left: 200px;
+  top: -373px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.boardingPass-flight_no {
+
+  position: relative;
+  left: 30px;
+  top: -330px;
+  font-size: 14px;
+}
+
+.boardingPass-date {
+
+  position: relative;
+  left: 120px;
+  top: -351px;
+  font-size: 14px;
+}
+
+.boardingPass-time {
+
+  position: relative;
+  left: 245px;
+  top: -372px;
+  font-size: 14px;
+}
+
+.boardingPass-seat {
+
+  position: relative;
+  left: 100px;
+  top: -368px;
+  font-size: 24px;
+  font-weight: bold;
+}
